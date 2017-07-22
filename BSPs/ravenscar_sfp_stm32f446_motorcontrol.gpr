@@ -1,8 +1,8 @@
-aggregate project Ravenscar_Sfp_MotorControl is
+aggregate project Ravenscar_Sfp_Stm32f446_MotorControl is
 
    Base_BSP_Source_Dir   := Project'Project_Dir & "cortex-m/stm32/motorcontrol/";
    Base_Installation_Dir := "arm-eabi/lib/gnat/";
-   Board                 := "motorcontrol";
+   Board                 := "stm32f446-motorcontrol";
    Default_Prefix        := 
      Base_Installation_Dir & "ravenscar-sfp-" & Board;
    Install_Dir           := external ("PREFIX", Default_Prefix);
@@ -30,4 +30,4 @@ aggregate project Ravenscar_Sfp_MotorControl is
       Base_BSP_Source_Dir & "internal/libgnarl.gpr",
       Base_BSP_Source_Dir & "ravenscar-sfp/install.gpr");
 
-end Ravenscar_Sfp_MotorControl;
+end Ravenscar_Sfp_Stm32f446_MotorControl;
